@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.emvlibiarytesing.ui.menu.menuFragment"
+        android:label="menuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_iccFragment"
+            app:destination="@id/iccFragment"
+            app:popUpTo="@id/menuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_contactlessFragment"
+            app:destination="@id/contactlessFragment"
+            app:popUpTo="@id/menuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_msrFragment"
+            app:destination="@id/msrFragment"
+            app:popUpTo="@id/menuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_rtcFragment"
+            app:destination="@id/rtcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactlessFragment"
+        android:name="com.example.emvlibiarytesing.ui.contactless.ContactLessFragment"
+        android:label="contactless_fragment"
+        tools:layout="@layout/contactless_fragment" >
+        <action
+            android:id="@+id/action_contactlessFragment_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:popUpTo="@id/contactlessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/msrFragment"
+        android:name="com.example.emvlibiarytesing.ui.msr.MsrFragment"
+        android:label="msr_fragment"
+        tools:layout="@layout/msr_fragment" >
+        <action
+            android:id="@+id/action_msrFragment_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:popUpTo="@id/msrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iccFragment"
+        android:name="com.example.emvlibiarytesing.ui.icc.IccFragment"
+        android:label="icc_fragment"
+        tools:layout="@layout/icc_fragment" >
+        <action
+            android:id="@+id/action_iccFragment_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:popUpTo="@id/iccFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.example.emvlibiarytesing.ui.pin.PinFragment"
+        android:label="pin_fragment"
+        tools:layout="@layout/pin_fragment" />
+    <fragment
+        android:id="@+id/rtcFragment"
+        android:name="com.example.emvlibiarytesing.ui.rtc.RtcFragment"
+        android:label="get_rtc_fragment"
+        tools:layout="@layout/rtc_fragment" />
+</navigation>

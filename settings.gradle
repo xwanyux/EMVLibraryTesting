@@ -1,0 +1,2 @@
+rootProject.name='EMVLibiaryTesing'
+include ':app', ':emv', ':usbSerialForAndroid', ':comWrapper'
